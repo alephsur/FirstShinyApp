@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\n\nangRad<- function(rad) (rad*pi)/180\n\nH <- function(v,a,g) ((v**2)*(sin(a)*sin(a)))/(2*g)\n\nL <- function(v,a,g) ((v**2)*(sin(a*2)))/g\n\nTi <- function(v,a,g) (2*v*sin(a))/g\n\nY<- function(v,a,g,x) ((v*sin(a))*x)-(1/2)*g*x**2\n\nX<- function(v,a,x) (v*cos(a)*x)\n\n\n\nshinyServer(\n  function(input,output){\n    g <<- 9.8\n    \n    output$High <- renderPlot(\n        plot(Y(input$V0,angRad(input$angulo),g,seq(1,Ti(input$V0,angRad(input$angulo),g))),\n             xlab=\"Time\",ylab=\"High\")       \n      )\n    output$Long <- renderPlot(\n        plot(X(input$V0,angRad(input$angulo),seq(1,Ti(input$V0,angRad(input$angulo),g))),\n             xlab=\"Time\",ylab=\"Long\")\n        )\n    \n\n  })\n\n",
+    "created" : 1403199960880.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3572427792",
+    "id" : "AA13F53D",
+    "lastKnownWriteTime" : 1403279073,
+    "path" : "C:/Users/portatil/WorkSpace R/Proyecto1/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

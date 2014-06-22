@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nshinyUI(pageWithSidebar(\n  headerPanel(\"Parabolic Motion\"),\n  sidebarPanel(\n    numericInput(inputId=\"V0\",label=\"Velocidad Inicial\",0),\n    sliderInput(\"angulo\",\"Angulo de salida\",value=0,min=0,max=90,step=1,),\n    h4('You have to introduce de velocity and the angle of a parabolic motion,\n       and you will see the graphics of this movement relative the time.')),\n  mainPanel(plotOutput(\"High\"),\n            plotOutput(\"Long\"))\n))\n\n",
+    "created" : 1403199950454.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3294196912",
+    "id" : "B8667211",
+    "lastKnownWriteTime" : 1403449376,
+    "path" : "C:/Users/portatil/WorkSpace R/Proyecto1/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
